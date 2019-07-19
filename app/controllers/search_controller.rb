@@ -1,7 +1,6 @@
 class SearchController < ApplicationController
   def index
-    json = read_json
-    @data = JSON.parse(json) if params[:input]
+    @data = SearchService.new(params[:input], read_json).find if params[:input]
   end
 
   private

@@ -5,12 +5,10 @@
     <div class="form-group">
       <input class="form-control" id="input-search" placeholder="Enter your request" name="input">
     </div>
-    <input type="submit" class="btn btn-primary" value="Submit">
+    <input type="submit" class="btn btn-primary" value="Search">
   <% end %>
 
-  <% if @data.nil? %>
-    <p>Not found languages</p>
-  <% else %>
+  <% unless @data.nil? %>
     <table class="table">
       <thead>
         <tr>
