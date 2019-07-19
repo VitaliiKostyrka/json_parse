@@ -1,24 +1,19 @@
-# README
+# Parse JSON
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### Ruby and Rails versions
+`ruby 2.5.1`
+`rails 5.2.3`
 
-Things you may want to cover:
+### How to start?
+  `git clone https://github.com/VitaliiKostyrka/json_parse.git`
 
-* Ruby version
+  `cd json_parse`
+    
+  `bundle install`
+    
+  `rails s`
 
-* System dependencies
+ Type data to input field and press `Search` to get the result of searched languages
+ Available data about languages is a name, type, and author
 
-* Configuration
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
