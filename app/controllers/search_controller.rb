@@ -1,8 +1,7 @@
 class SearchController < ApplicationController
   def index
     json = read_json
-    @data = json.nil? ? "error" : json
-
+    @data = JSON.parse(json) if params[:input]
   end
 
   private

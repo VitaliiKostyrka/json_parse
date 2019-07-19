@@ -1,1 +1,33 @@
-<%= @data %>
+<div class="container">
+
+  <h1 class="text-center">Search Language</h1>
+  <%= form_tag("/", method: 'post' ) do %>
+    <div class="form-group">
+      <input class="form-control" id="input-search" placeholder="Enter your request" name="input">
+    </div>
+    <input type="submit" class="btn btn-primary" value="Submit">
+  <% end %>
+
+  <% if @data.nil? %>
+    <p>Not found languages</p>
+  <% else %>
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">Name</th>
+          <th scope="col">Type</th>
+          <th scope="col">Designed by</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @data.each do |lang| %>
+          <tr>
+            <td><%= lang["Name"] %></td>
+            <td><%= lang["Type"] %></td>
+            <td><%= lang["Designed by"] %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  <% end %>
+</div>
