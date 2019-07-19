@@ -1,0 +1,9 @@
+AllCops:
+  Excludes:
+    - bin/**/*
+    - db/**/*
+    - config/**/*
+Style/FrozenStringLiteralComment:
+  Enabled: false
+Style/Documentation:
+  Enabled: false
